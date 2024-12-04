@@ -85,9 +85,8 @@ header .donate-button {
 
 .gallery-grid img {
     width: 100%; /* Gambar memenuhi kolom */
-    height: auto; /* Menjaga rasio aspek gambar */
+    height: 200px; /* Tinggi tetap untuk menyamakan ukuran */
     object-fit: cover; /* Memastikan gambar proporsional */
-    max-height: 300px; /* Opsional: Batasi tinggi maksimal */
     border-radius: 10px; /* Opsional: Sudut melengkung */
 }
 
