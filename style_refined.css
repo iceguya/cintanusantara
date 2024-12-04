@@ -66,13 +66,47 @@ header .donate-button {
 /* Articles */
 .articles {
     background: #FFF7E4;
-    padding: 250px;
+    padding: 20px; /* Ruang dalam untuk area artikel */
+    box-sizing: border-box; /* Hitung padding dalam elemen */
 }
 
 .article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    display: grid; /* Gunakan grid untuk tata letak */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom fleksibel */
+    gap: 20px; /* Jarak antar elemen */
+    justify-items: center; /* Posisi elemen di tengah kolom */
+}
+
+.article {
+    background: white;
+    border-radius: 10px; /* Tambahkan sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    padding: 15px; /* Ruang dalam untuk elemen artikel */
+    text-align: center; /* Pusatkan teks */
+}
+
+.article img {
+    width: 100%; /* Gambar memenuhi lebar elemen */
+    height: auto; /* Jaga proporsi gambar */
+    border-radius: 10px; /* Tambahkan sudut melengkung */
+    margin-bottom: 10px; /* Jarak gambar dengan teks */
+}
+
+.article h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.article p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .article-grid {
+        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
 }
 
 .gallery-grid {
@@ -85,7 +119,7 @@ header .donate-button {
 
 .gallery-grid img {
     width: 100%; /* Gambar memenuhi kolom */
-    height: 200px; /* Tinggi tetap untuk menyamakan ukuran */
+    height: 20vh; /* Tinggi tetap untuk menyamakan ukuran */
     object-fit: cover; /* Memastikan gambar proporsional */
     border-radius: 10px; /* Opsional: Sudut melengkung */
 }
