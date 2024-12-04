@@ -1,0 +1,101 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FFF7E4;
+    color: #333;
+}
+
+/* Header */
+header.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #A8D5BA;
+}
+
+header .main-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+header .donate-button {
+    background: #F8D7DA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #B3D9FF;
+}
+
+.hero img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    background: #FFF7E4;
+    padding: 20px;
+}
+
+/* Programs */
+.programs {
+    background: #F0F0F0;
+    padding: 20px;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Articles */
+.articles {
+    background: #FFF7E4;
+    padding: 250px;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Membuat kolom otomatis */
+    gap: 15px; /* Jarak antar gambar */
+    padding: 10px; /* Ruang dalam galeri */
+    justify-items: center; /* Menyusun gambar di tengah setiap kolom */
+}
+
+.gallery-grid img {
+    width: 100%; /* Gambar memenuhi kolom */
+    height: auto; /* Menjaga rasio aspek gambar */
+    object-fit: cover; /* Memastikan gambar proporsional */
+    max-height: 300px; /* Opsional: Batasi tinggi maksimal */
+    border-radius: 10px; /* Opsional: Sudut melengkung */
+}
+
+
+/* Footer */
+footer.main-footer {
+    text-align: center;
+    padding: 10px;
+    background: #A8D5BA;
+    color: white;
+}
