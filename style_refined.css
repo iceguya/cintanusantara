@@ -150,6 +150,7 @@ body {
 .progress-info {
     display: flex;
     justify-content: space-between;
+    margin-left: 20px;
     margin-bottom: 10px;
     font-size: 14px;
     color: #444;
@@ -161,6 +162,7 @@ body {
     height: 10px;
     width: 100%;
     overflow: hidden;
+    margin-left: 20px;
     margin-bottom: 20px;
 }
 
@@ -171,6 +173,7 @@ body {
 }
 
 .donate-button {
+    margin-left: 20px;
     display: inline-block;
     padding: 10px 20px;
     background-color: #FF8243;
@@ -275,6 +278,7 @@ body {
     background: #FFF7E4;
     padding: 20px; /* Ruang dalam untuk area artikel */
     box-sizing: border-box; /* Hitung padding dalam elemen */
+    min-height: 200px;
 }
 
 .article-grid {
@@ -290,6 +294,7 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
     padding: 15px; /* Ruang dalam untuk elemen artikel */
     text-align: center; /* Pusatkan teks */
+    min-height: 200px;
 }
 
 .article img {
@@ -302,6 +307,8 @@ body {
 .article h3 {
     font-size: 18px;
     margin: 10px 0;
+    max-width: 500px;
+    min-width: 100px;
 }
 
 .article p {
@@ -464,5 +471,55 @@ footer.main-footer {
 
     .visi-misi-container {
         width: 100%; /* Visi dan Misi menjadi full-width pada mobile */
+    }
+}
+
+/* Animasi scroll seamless */
+@keyframes seamless-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.gallery-grid-wrapper {
+    display: flex;
+    overflow: hidden; /*Hanya menampilkan viewport */
+    position: relative;
+    width: 100%;
+    background: #FFF7E4; /* Tambahkan latar belakang opsional */
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px; /* Jarak antar elemen */
+    animation: seamless-scroll 9s linear infinite; /* Durasi animasi */
+    width: calc(200%); /* Dua kali lipat ukuran konten asli */
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: 300px; /* Tetap konsisten pada semua item */
+    text-align: center;
+    background: white; /* Opsional: styling untuk estetika */
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 200px; /* Perkecil ukuran elemen */
+    }
+    .gallery-grid {
+        animation: seamless-scroll 9s linear infinite; /* Perpanjang durasi animasi */
     }
 }

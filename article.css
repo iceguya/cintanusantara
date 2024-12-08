@@ -152,12 +152,17 @@ body {
     background: #FFF7E4;
     padding: 20px; /* Ruang dalam untuk area artikel */
     box-sizing: border-box; /* Hitung padding dalam elemen */
+    font-size: 40px; /* Ukuran font dikurangi untuk lebih proporsional di desktop */
+    font-family: 'Poppins', 'Times New Roman', sans-serif;
+    font-weight: 300;
+    text-align: center;
 }
 
 .article-grid {
+    margin: 50px; /* Gunakan margin yang sama pada semua sisi */
     display: grid; /* Gunakan grid untuk tata letak */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom fleksibel */
-    gap: 20px; /* Jarak antar elemen */
+    gap: 50px; /* Kurangi jarak antar elemen untuk tampilan lebih padat */
     justify-items: center; /* Posisi elemen di tengah kolom */
 }
 
@@ -165,38 +170,57 @@ body {
     background: white;
     border-radius: 10px; /* Tambahkan sudut melengkung */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
-    padding: 15px; /* Ruang dalam untuk elemen artikel */
+    padding: 20px; /* Sedikit lebih banyak ruang untuk teks */
+    max-width: 400px; /* Batasi lebar maksimum artikel pada desktop */
 }
 
 .articletype {
-     text-align: center; /* Pusatkan teks untuk head */
+    text-align: center; /* Pusatkan teks untuk head */
 }
 
-.articletypebody{  /*untuk atur margin text body*/
-    text-align: justify;
+.articletypebody {
+    text-align: justify; /* Justifikasi teks body */
 }
 
 .article img {
     width: 100%; /* Gambar memenuhi lebar elemen */
+    max-width: 300px; /* Batasi lebar gambar pada desktop */
     height: auto; /* Jaga proporsi gambar */
     border-radius: 10px; /* Tambahkan sudut melengkung */
     margin-bottom: 10px; /* Jarak gambar dengan teks */
 }
 
 .article h3 {
-    font-size: 18px;
+    font-size: 28px; /* Perbesar font untuk heading di desktop */
     margin: 10px 0;
 }
 
 .article p {
-    font-size: 14px;
+    font-size: 16px; /* Perbesar font untuk paragraf di desktop */
     color: #555;
+    line-height: 1.6; /* Tambahkan spasi antar baris */
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .article-grid {
         grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+
+    .article {
+        max-width: none; /* Tidak ada batasan lebar pada mobile */
+    }
+
+    .article img {
+        max-width: none; /* Gambar tetap memenuhi elemen di mobile */
+    }
+
+    .article h3 {
+        font-size: 24px; /* Ukuran heading tetap */
+    }
+
+    .article p {
+        font-size: 14px; /* Ukuran paragraf tetap */
     }
 }
 
@@ -210,9 +234,9 @@ footer.main-footer {
 
 /* exit bottom */
 .exit-button {
-    display:inline-flex;
+    display: inline-flex;
     position: absolute;
-    margin-top: 20px;
+    left: 13vh; /* Jarak dari kiri kontainer */
     padding: 10px 20px;
     background-color: #FF8243; /* Warna oranye */
     color: white;
@@ -220,7 +244,30 @@ footer.main-footer {
     border-radius: 5px;
     font-size: 14px;
     font-weight: bold;
-    text-align: left;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
 }
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .article-grid {
+        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+
+    .article {
+        max-width: none; /* Tidak ada batasan lebar pada mobile */
+    }
+
+    .article img {
+        max-width: none; /* Gambar tetap memenuhi elemen di mobile */
+    }
+
+    .article h3 {
+        font-size: 24px; /* Ukuran heading tetap */
+    }
+
+    .article p {
+        font-size: 14px; /* Ukuran paragraf tetap */
+    }
+}
+
