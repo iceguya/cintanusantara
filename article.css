@@ -1,0 +1,273 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #FFF7E4;
+    color: #333;
+    overflow-x: hidden; /* Menghapus scroll horizontal */
+}
+/* Header */
+/* Styling untuk Header */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFF7E4; /* Ganti dengan warna sesuai keinginan */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Menjaga logo dan teks tetap sejajar */
+}
+
+.logo-img {
+    width: 50px; /* Atur ukuran logo sesuai kebutuhan */
+    height: auto;
+    margin-right: 15px; /* Memberikan jarak antara logo dan teks */
+}
+
+.main-header h1 {
+    font-size: 2em;
+    margin: 0; /* Menghapus margin default pada <h1> */
+    color: rgb(0, 0, 0);
+}
+
+.main-nav a, .donate-button {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+/* Default Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF7E4;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFF7E4;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-links {
+    position: absolute; /* Letakkan menu di atas */
+    top: 0;
+    right: -100%; /* Mulanya tersembunyi */
+    z-index: 9998; /* Tepat di bawah burger menu */
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.9); /* Warna semi transparan */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+}
+
+.nav-links.active {
+    right: 0; /* Tampilkan menu saat aktif */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    position: absolute; /* Letakkan di atas elemen lain */
+    top: 20px; /* Jarak dari atas */
+    right: 20px; /* Jarak dari kanan */
+    z-index: 9999; /* Pastikan berada di lapisan paling depan */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: transparent; /* Tidak mengganggu gambar di bawahnya */
+}
+
+.burger-menu .line {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex; /* Show burger menu */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially hidden */
+        height: 100vh;
+        width: 250px;
+        background-color: #FFF;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        right: 0; /* Show navigation */
+    }
+}
+
+/* Articles */
+.articles {
+    background: #FFF7E4;
+    padding: 20px; /* Ruang dalam untuk area artikel */
+    box-sizing: border-box; /* Hitung padding dalam elemen */
+    font-size: 40px; /* Ukuran font dikurangi untuk lebih proporsional di desktop */
+    font-family: 'Poppins', 'Times New Roman', sans-serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.article-grid {
+    margin: 50px; /* Gunakan margin yang sama pada semua sisi */
+    display: grid; /* Gunakan grid untuk tata letak */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom fleksibel */
+    gap: 50px; /* Kurangi jarak antar elemen untuk tampilan lebih padat */
+    justify-items: center; /* Posisi elemen di tengah kolom */
+}
+
+.article {
+    background: white;
+    border-radius: 10px; /* Tambahkan sudut melengkung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    padding: 20px; /* Sedikit lebih banyak ruang untuk teks */
+    max-width: 400px; /* Batasi lebar maksimum artikel pada desktop */
+}
+
+.articletype {
+    text-align: center; /* Pusatkan teks untuk head */
+}
+
+.articletypebody {
+    text-align: justify; /* Justifikasi teks body */
+}
+
+.article img {
+    width: 100%; /* Gambar memenuhi lebar elemen */
+    max-width: 300px; /* Batasi lebar gambar pada desktop */
+    height: auto; /* Jaga proporsi gambar */
+    border-radius: 10px; /* Tambahkan sudut melengkung */
+    margin-bottom: 10px; /* Jarak gambar dengan teks */
+}
+
+.article h3 {
+    font-size: 28px; /* Perbesar font untuk heading di desktop */
+    margin: 10px 0;
+}
+
+.article p {
+    font-size: 16px; /* Perbesar font untuk paragraf di desktop */
+    color: #555;
+    line-height: 1.6; /* Tambahkan spasi antar baris */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .article-grid {
+        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+
+    .article {
+        max-width: none; /* Tidak ada batasan lebar pada mobile */
+    }
+
+    .article img {
+        max-width: none; /* Gambar tetap memenuhi elemen di mobile */
+    }
+
+    .article h3 {
+        font-size: 24px; /* Ukuran heading tetap */
+    }
+
+    .article p {
+        font-size: 14px; /* Ukuran paragraf tetap */
+    }
+}
+
+/* Footer */
+footer.main-footer {
+    text-align: center;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+}
+
+/* exit bottom */
+.exit-button {
+    display: inline-flex;
+    position: absolute;
+    left: 13vh; /* Jarak dari kiri kontainer */
+    padding: 10px 20px;
+    background-color: #FF8243; /* Warna oranye */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .article-grid {
+        grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+
+    .article {
+        max-width: none; /* Tidak ada batasan lebar pada mobile */
+    }
+
+    .article img {
+        max-width: none; /* Gambar tetap memenuhi elemen di mobile */
+    }
+
+    .article h3 {
+        font-size: 24px; /* Ukuran heading tetap */
+    }
+
+    .article p {
+        font-size: 14px; /* Ukuran paragraf tetap */
+    }
+}
+

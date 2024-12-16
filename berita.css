@@ -1,0 +1,182 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7E4;
+}
+
+/* Container for main layout */
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.image-container{
+    text-align: center;
+}
+
+/* Main article section */
+.main-article {
+    flex: 2; /* Take up more space */
+
+}
+
+.article {
+    background: #f9f2effd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.article h1 {
+    font-size: 24px;
+    color: #00715D;
+    margin-bottom: 10px;
+}
+
+.author-date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.article-image {
+    width: 100%;
+    margin-bottom: 10px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.main-article p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Related articles section */
+.related-articles {
+    flex: 1; /* Smaller width compared to the main article */
+    background: #fcf9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.related-articles h2 {
+    font-size: 20px;
+    color: #656464;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.related-articles ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-articles li {
+    margin-bottom: 15px;
+}
+
+.related-articles a {
+    font-size: 16px;
+    color: #515653;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.related-articles a:hover {
+    text-decoration: underline;
+}
+
+.related-articles p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0 0;
+}
+
+.image-containerarticle{
+    text-align: center; /* Menyelaraskan gambar ke tengah secara horizontal */
+    margin: 20px auto 20px auto; /* Menambahkan margin otomatis di kiri dan kanan agar gambar terpusat */
+    max-width: 100%; /* Membuat gambar responsif dan mengikuti lebar container */
+    height: auto; /* Mempertahankan proporsi gambar */
+    border-radius: 10px; /* Membuat sudut gambar menjadi melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk tampilan lebih menarik */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang overflow dari container */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .main-article, .related-articles {
+        width: 100%;
+    }
+}
+
+.image-container {
+    text-align: center; /* Menyelaraskan gambar ke tengah secara horizontal */
+    margin: 0 auto 20px auto; /* Menambahkan margin otomatis di kiri dan kanan agar gambar terpusat */
+    max-width: 100%; /* Membuat gambar responsif dan mengikuti lebar container */
+    height: auto; /* Mempertahankan proporsi gambar */
+    border-radius: 10px; /* Membuat sudut gambar menjadi melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk tampilan lebih menarik */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang overflow dari container */
+}
+
+.article-image {
+    width: 100%;
+    height: auto; /* Pastikan gambar mempertahankan rasio aspek */
+    object-fit: cover; /* Memastikan gambar mengisi kontainer dengan baik tanpa distorsi */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.main-footer {
+    background-color: #FFF7E4;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #eaeaea;
+  }
+  
+  .footer-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #00715D;
+  }
+  
+  .footer-menu {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-menu li a {
+    text-decoration: none;
+    color: #3D3D3D;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .footer-menu li a:hover {
+    color: #00715D;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
