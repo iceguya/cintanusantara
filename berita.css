@@ -15,6 +15,10 @@ body {
     padding: 20px;
 }
 
+.image-container{
+    text-align: center;
+}
+
 /* Main article section */
 .main-article {
     flex: 2; /* Take up more space */

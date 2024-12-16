@@ -3,7 +3,8 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden; /* Menghapus scroll horizontal */
+    overflow-x: hidden;
+     /* Menghapus scroll horizontal */
 }
 
 
@@ -13,6 +14,7 @@ body {
     padding: 0;
     background: #FFF7E4;
     color: #333;
+    
 }
 
 /* Header */
@@ -27,6 +29,7 @@ body {
     color: rgb(0, 0, 0);
     text-decoration: none;
     margin: 0 10px;
+    overflow: hidden;
 }
 .main-header {
     display: flex;
@@ -276,9 +279,10 @@ body {
 /* Articles */
 .articles {
     background: #FFF7E4;
-    padding: 20px; /* Ruang dalam untuk area artikel */
+    padding: 15px; /* Ruang dalam untuk area artikel */
     box-sizing: border-box; /* Hitung padding dalam elemen */
     min-height: 200px;
+    
 }
 
 .article-grid {
@@ -286,6 +290,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Kolom fleksibel */
     gap: 20px; /* Jarak antar elemen */
     justify-items: center; /* Posisi elemen di tengah kolom */
+
 }
 
 .article {
@@ -295,6 +300,7 @@ body {
     padding: 15px; /* Ruang dalam untuk elemen artikel */
     text-align: center; /* Pusatkan teks */
     min-height: 200px;
+
 }
 
 .article img {
@@ -309,6 +315,7 @@ body {
     margin: 10px 0;
     text-align: center;
     font-family: 'poppins';
+    
 
 }
 
@@ -329,6 +336,10 @@ body {
 @media (max-width: 768px) {
     .article-grid {
         grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+    }
+    .article img{
+        min-height: 400px;
+        max-height: 500px;
     }
 }
 
