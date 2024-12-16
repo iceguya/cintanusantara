@@ -22,13 +22,17 @@ body {
 /* Main article section */
 .main-article {
     flex: 2; /* Take up more space */
-    background: #f9f2effd;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
-.main-article h1 {
+.article {
+    background: #f9f2effd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.article h1 {
     font-size: 24px;
     color: #00715D;
     margin-bottom: 10px;
